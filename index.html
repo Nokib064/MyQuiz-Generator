@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyQuiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- <span class="logo">MyQuiz . Trivia questions</span> -->
+        <span class="logo">MyQuiz</span>
+        <span class="tagline">Trivia questions</span>
+    </header>
+    <main>
+        <!-- SCREEN 1: Welcome Screen -->
+        <section id="start-screen" class="screen">
+            <p id="start-best-score">Best Score: 0/10</p>
+            <h1>Welcome to Your Trivia questions</h1>
+            <p>Questions that test your intelligent Quotient(IQ) in your target discipline</p>
+            <div class="selection-area">
+                <div class="form-group">
+                    <label for="category">Choose a question category </label>
+                    <select id="category">
+                        <option value="">Loading categories....</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="difficulty">Select  difficulty</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>   
+            </div>
+            <button id="start-btn">Start quiz</button>
+            <p id="loading-message" class="hidden">Loading questions, please wait...</p>
+            <p id="error-message" class="hidden">Sorry, we couldn't load the questions. Please try again.</p>
+            <button id="retry-btn" class="hidden" type="button">Try Again</button>
+        </section>
+
+        <!-- SCREEN 2: Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <p id="question-counter"></p>
+                <p id="running-score">Score: 0</p>
+                <p id="timer">Time: 15s</p>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <h2 id="question-text">Questions appear here</h2>
+            <div id="answer-options" class="answer-options">
+                <!-- Answer buttons will be generated using JavaScript -->
+            </div>
+            <button id="next-btn">Next question</button>
+        </section>
+
+        <!-- SCREEN 3: Results Screen -->
+        <section id="result-screen" class="screen hidden">
+            <h2>quiz completed</h2>
+            <p>Your score</p>
+            <h1 id="final-score">0/10</h1>
+            <p id="percentage">0%</p>
+            <p id="performance-message">Keep practicing!</p>
+            <p>Best Score <span id="best-score">0</span></p>
+            <button id="play-again-btn">Play Again</button>
+        </section>
+        <script src="script.js"></script>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2026 Ismaeel Ekundayo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
